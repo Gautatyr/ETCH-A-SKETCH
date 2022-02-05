@@ -1,6 +1,7 @@
 
 const container = document.querySelector(".container");
 
+
 //Create 256 squares to fill the container(16x16)
 for (let i = 0; i < 256; i++) {
     const div = document.createElement("div");
@@ -42,20 +43,20 @@ function createGrid(size){
     const squares = document.querySelectorAll(".square")
 
     squares.forEach(square => square.addEventListener("mouseover", function(e){
-        this.style.backgroundColor = "blue";
+        this.style.backgroundColor = "black";
     }));
 }
 
 const squares = document.querySelectorAll(".square")
 
 squares.forEach(square => square.addEventListener("mouseover", function(e){
-    this.style.backgroundColor = "blue";
+    this.style.backgroundColor = "black";
 }));
 
 const buttonClear = document.querySelector(".clear");
 
 buttonClear.addEventListener("click", function(){
-    squares.forEach(square => {square.style.backgroundColor = "pink";});
+    //squares.forEach(square => {square.style.backgroundColor = "pink";});
     let gridSize = prompt("Choose the new size of the grid (Max:100x100)");
     createGrid(gridSize);
 })
