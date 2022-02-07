@@ -27,6 +27,8 @@ function createGrid(size){
 
     if(size > 100){
         size = 100;
+    }else if (size !== Number){
+        size = 50;
     }
 
     container.style.width = addPx(size*16);
@@ -56,7 +58,6 @@ squares.forEach(square => square.addEventListener("mouseover", function(e){
 const buttonClear = document.querySelector(".clear");
 
 buttonClear.addEventListener("click", function(){
-    //squares.forEach(square => {square.style.backgroundColor = "pink";});
-    let gridSize = prompt("Choose the new size of the grid (Max:100x100)");
+    let gridSize = prompt("Choose the new size of the grid (Max:100)");
     createGrid(gridSize);
 })
